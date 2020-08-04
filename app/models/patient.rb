@@ -1,0 +1,7 @@
+class Patient
+    attr_accessor :name, :age
+    def initialize(name, age)
+        @name = name
+        @age = specialty
+    end
+end
