@@ -1,6 +1,5 @@
 require 'pry'
 
-
 class Patient
     attr_reader :impatience
     attr_accessor :name, :age
@@ -29,6 +28,7 @@ class Patient
         self.impatience += 1
     end
 end
+
 
 #Patients should be initialized with an instance variable, impatience, set to 0
 #Patient#increase_impatience: should be a private method that increases impatience by 1 

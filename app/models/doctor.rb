@@ -1,10 +1,6 @@
 require 'pry'
 
 
-
-
-
-
 class Doctor
     attr_reader :specialty
     attr_accessor :name, :years
@@ -15,6 +11,7 @@ class Doctor
         @years = years
         @@all << self
     end
+    
     def greet
         puts "Hello! Welcome back, please have a seat and your Doctor will be right with you!"
     end
