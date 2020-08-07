@@ -1,30 +1,33 @@
+require 'pry'
+
+
 class Patient
     attr_reader :impatience
     attr_accessor :name, :age
     @@all = []
     def initialize(name, age, impatience=0)
         @name = name
-        @age = specialty
+        @age = age
         @impatience = impatience
         @@all << self
     end
 
     def inquire_appt_ready
         puts "Your doctor will be seeing you soon!"
-        @impatience -= 1
-    end
+        increase_impatience
     end
     
     def self.all
         @@all
     end
     
+    def change_doctors(doctor)
+        self.doctor = doctor
+    end
     private
     def increase_impatience
-        @impatience += 1
+        self.impatience += 1
     end
-    end
-
 end
 
 #Patients should be initialized with an instance variable, impatience, set to 0
